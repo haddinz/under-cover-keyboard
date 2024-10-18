@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.fmlx-icon {
+  &.fmlx-icon-primary { fill: $neutral-13; }
+  &.fmlx-icon-secondary { fill: $brand-1; }
+  &.fmlx-icon-command { fill: $neutral-3; }
+  &.fmlx-icon-dsbld { fill: $neutral-9; }
+  &.fmlx-icon-info { fill: $blue-3; }
+  &.fmlx-icon-success { fill: $green-3; }
+  &.fmlx-icon-warning { fill: $yellow-3; }
+  &.fmlx-icon-error { fill: $red-3; }
+}

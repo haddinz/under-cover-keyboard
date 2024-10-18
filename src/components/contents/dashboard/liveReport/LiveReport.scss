@@ -1,0 +1,126 @@
+@import '../../../../index.scss';
+
+.live-report{
+  min-height: 427px;
+
+  &-main {
+    width: calc(100% - 276px - 5px);
+    margin-right: 5px;
+  }
+  
+  &-top {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  &-chart-mode-btn {
+    border: none;
+    background: none;
+    border-bottom: solid 1px #ffffff;
+    width: 108px;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+
+    &-active {
+      border-bottom: solid 1px #000000;
+      // box-shadow: 0 1px 0 #000;
+    }
+  }
+
+  &-chart {
+    background-color: $neutral-11;
+    min-height: 420px;
+  }
+
+  &-chart-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $brand-2;
+  }
+  
+  &-control {
+    margin: auto;
+    max-width: 300px;
+    padding-top: 28px;
+
+    &-wrapper {
+      width: calc(370px + 10rem);
+    }
+
+    &-title {
+      text-align: center;
+      background: rgba(217, 217, 217, 1);
+      height: 48px;
+    }
+  }
+
+  $legend-border: $brand-2;
+  
+  &-legend {
+    border-collapse: collapse;
+    margin: auto;
+    border: solid 1px $neutral-10;
+
+    & th, & td {
+      height: 48px;
+      width: 185px;
+      padding: 14px 16px 14px 16px;
+    }
+
+    & th {
+      background-color: $neutral-10;
+      color: $neutral-1;
+
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0em;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+
+    & td {
+      color: $neutral-3;
+
+      //styleName: Product/Regular/text-sm;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+    }
+
+    & > tbody > tr:not(:last-child), & th {
+      border-bottom: solid 1px $neutral-10;
+    }
+
+    & th:not(:last-child), & td:not(:last-child) {
+      border-right: solid 1px $neutral-10;
+    }
+  }
+
+  &-chart-wrapper {
+    margin: auto;
+    padding-bottom: 10px;
+    width: min-content;
+    height: 100%;
+
+    &-combined {
+      width: 563px;
+    }
+    &-splitted {
+      width: calc(2 * 563px);
+    }
+  }
+}

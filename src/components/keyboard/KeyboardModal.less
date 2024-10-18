@@ -1,0 +1,231 @@
+@import "../../styles/variable.less";
+
+@background-color-buttton : white;
+@button-keyboard-height : 73.5px;
+@input-height : 120px;
+@margin-keyboard : 10px;
+@input-background-color : #F2F2F2;
+@keyboard-message-font-size : 15px;
+
+.keyboard {
+	width: 100%;
+	max-width: 1030px;
+	margin: 0 auto;
+	background: #dadada;
+	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.keyboard-row {
+	display: flex;
+}
+
+.keyboard-keysSet {
+	display: flex;
+	flex-grow: 1;
+}
+
+.keyboard-button {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-basis: 150px;
+	font-size: 45px;
+	height: @button-keyboard-height;
+	border-radius: 4px;
+	background-color: @background-color-buttton;
+	border: 1px solid @protein-concentration-color;
+	font-family: @font-style;
+	font-weight: 300;
+	color: @protein-concentration-color;
+	margin: 2px;
+}
+
+.keyboard-button:focus {
+	outline: none;
+}
+
+.keyboard-button:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.keyboard-button:active {
+	background-color: rgb(250, 207, 160);
+	color: white;
+}
+
+.keyboard-numberButton {
+	flex-grow: 1;
+}
+
+.keyboard-halfButton {
+	flex-basis: 56px;
+}
+
+.keyboard-space {
+	flex-grow: 1;
+}
+
+.keyboard-utilButton {
+	flex-grow: 2;
+	max-width: 55px;
+}
+
+.keyboard-additionalButton {
+	flex-basis: 128px;
+}
+
+.keyboard-submit-button {
+	flex-basis: 95px;
+	background-color: @protein-concentration-color;
+	border-color: @protein-concentration-color;
+	;
+	color: white;
+}
+
+.keyboard-wrapper {
+	position: inherit;
+	// top: 145px;
+	/* z-index: 10000; */
+	width: 100%;
+	margin: @margin-keyboard ;
+	margin-top: 0px;
+	// margin-left: auto;
+	// margin-right: auto;
+}
+
+.keyboard-button.shift-symbols {
+	flex-basis: 290px;
+}
+
+.keyboardValue {
+	position: fixed;
+	/* z-index: 100; */
+	font-size: 40px;
+	color: @protein-concentration-color
+}
+
+.modal-dialog-keyboard {
+	// top:-5px;
+	width: 1000px;
+	// margin-top:5px;
+	color: @protein-concentration-color;
+	margin: auto;
+	margin-top: 9px;
+}
+
+.modal-body-keyboard {
+	padding: 0px;
+	height: auto
+}
+
+.headerKeyboard {
+	border-bottom: 0px;
+	padding-bottom: 0px;
+
+	.keyboard-title {
+		font-size: 20px;
+	}
+}
+
+.divValue {
+	text-align: center;
+}
+
+.div-validation {
+	text-align: left;
+	font-size: @keyboard-message-font-size;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: red;
+	// height: auto;
+	// height: 20px;
+}
+
+.divRowKeyboard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: inherit;
+	height: auto;
+}
+
+.divColKeyboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.counterKeyboard {
+	font-size: 12px;
+}
+
+.inputPosition {
+	/* position:fixed; */
+	border-radius: 5px;
+	background-color: @input-background-color ;
+	border-style: hidden;
+	width: 90%;
+	height: @input-height;
+	// font-size: 20px;
+	color: @protein-concentration-color;
+	vertical-align: middle;
+	margin: @margin-keyboard ;
+	resize: none;
+	padding: 5px;
+	/* z-index: 100; */
+}
+
+.inputPosition:focus {
+	outline: none;
+}
+
+.valueBackgroundColor {
+	/* background-color: rgb(255, 242, 229); */
+	border-radius: 5px;
+	height: 539px; //535px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: -moz-available;
+	width: -webkit-fill-available;
+}
+
+.modal-header .close {
+	margin-top: -2px;
+	font-size: 30px;
+}
+
+.hideOverflowKeyboard {
+	overflow: hidden !important;
+}
+
+.buttonClear {
+	background-color: transparent;
+	width: 75px;
+	height: 75px;
+	border: none;
+	padding-left: 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	.baseClearIcon {
+		font-size: 60px;
+		// text-align: end;
+		width: auto;
+	}
+
+	.clearIcon {
+		.baseClearIcon;
+		color: @protein-concentration-color;
+	}
+
+	.clearIcon-disabled {
+		.baseClearIcon;
+		color: fade(@protein-concentration-color, 50%);
+	}
+}

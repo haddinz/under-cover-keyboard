@@ -1,0 +1,60 @@
+path.bb-shape {
+  /* shape-rendering: optimizeSpeed; */
+}
+
+.yaxis-option-label {
+  font-family: Roboto, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sensor-chart-legend {
+  display: flex;
+  justify-content: center;
+
+  &-item {
+    display: inline;
+    width: 85px;
+    display: flex;
+
+    & label {
+      font-family: Roboto, serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  // Override bootstrap setting for svg V-Align: middle
+  & svg {
+    vertical-align: top !important;
+  }
+}
+
+.sensor-chart-legend-btn {
+  border: none;
+  padding: none;
+  background: none;
+  width: 85px;
+
+  display: flex;
+  justify-content: start;
+
+  & > * {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.fps-overlay {
+  opacity: 0.5;
+  right: 0;
+  text-align: center;
+  width: 150px;
+  font-size: 12px;
+}

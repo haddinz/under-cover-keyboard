@@ -1,0 +1,21 @@
+.camera-view-container { 
+    text-align: center;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+
+    & > * {
+        margin: auto;
+    }
+}
+
+.camera-view-image { 
+    margin: auto; 
+}
+
+.camera-control {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}

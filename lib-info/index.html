@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Cpanel UI 3rd Party Libs</title>
+    <script src="./package.js"></script>
+    <script src="./package-lock.js"></script>
+    <style>
+      * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #table {
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      td, th {
+        padding: 3px;
+        margin: 0;
+        border-bottom: solid 1px gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Third Party Libraries</h2>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Version</th>
+          <th>license</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <script>
+      let deps = {};
+      const tbody = document.getElementById('tableBody');
+
+      function initDeps() {       
+        for (const key in package.dependencies) {
+          console.log(key, package.dependencies[key]);
+          deps[key] = {
+            version: package.dependencies[key],
+            license: undefined
+          }
+        }
+        for (const key in package.devDependencies) {
+          console.log(key, package.devDependencies[key]);
+          deps[key] = {
+            version: package.devDependencies[key],
+            license: undefined
+          }
+        }
+      }
+
+      function readlicenses() {
+        const packages = packageLock.packages;
+        for (const key in deps) {
+          const fullName = `node_modules/${key}`;
+          if (!packages[fullName]) {
+            console.warn('package not found:', fullName);
+            continue;
+          }
+          const detail = packages[fullName];
+          deps[key]['license'] = detail.license;
+        }
+      }
+
+      function mapValues() {
+        tbody.innerHTML = '';
+        let num = 1;
+        for (const key in deps) {
+          const val = deps[key];
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${num}</td><td>${key}</td><td>${val.version}</td><td>${val.license}</td>`;
+          tbody.appendChild(row);
+          num++;
+        }
+      }
+
+      initDeps();
+      readlicenses();
+      mapValues();
+    </script>
+  </body>
+</html>

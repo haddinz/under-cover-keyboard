@@ -1,0 +1,41 @@
+@import '../../index.scss';
+
+.footer {
+    $outline: #AAAAAA;
+
+    min-height: 208px;
+    width: 100%;
+    background-color: $neutral-11;
+    color: $neutral-1;
+    box-shadow: -1px 0px 0px 0px $outline, 1px 0px 0px 0px $outline, 0px 1px 0px 0px $outline;
+    font-family: Roboto, serif;
+
+    &-title {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &-component-label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    &-component-value {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        color: $blue-3;
+
+        white-space: pre;
+
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../index.scss';
+
+.search-input {
+    height: 26px;
+    width: 260px;
+    border-radius: 2px;
+    padding: 2px 12px 2px 14px;
+    border: solid 1px $neutral-8;
+
+    font-family: Roboto, serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $neutral-6;
+
+    &:focus,
+    &:active {
+        outline: solid 2px $blue-4;
+    }
+}
+
+$btn-width: 36px;
+
+.search-submit {
+    position: absolute;
+    
+    width: $btn-width;
+    height: 22px;
+    
+    top: 2px;
+    padding-left: 1px;
+    padding-bottom: 4px;
+    left: calc(260px - $btn-width);
+
+    border-left: solid 1px $neutral-8;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+     
+    background-color: transparent;
+
+    & > svg {
+        vertical-align: text-top !important;
+    }
+}

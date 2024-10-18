@@ -1,0 +1,38 @@
+@import '../../../index.scss';
+
+.reports-no-content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    
+    font-family: Roboto, serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $neutral-8;
+
+    & > * {
+        margin: auto;;
+    }
+}
+
+.report-detail-header {
+
+    padding: 0;
+    
+    & .regular-label {
+        color: $neutral-2;
+    }
+
+    &-value {
+        color: $brand-2;
+        font-family: Roboto, serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: -0.011em;
+        text-align: left;
+    }
+}

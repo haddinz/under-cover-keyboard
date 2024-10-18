@@ -1,0 +1,74 @@
+@import '../../../../index.scss';
+
+.led-heater-setting-column {
+    display: flex;
+    align-items: center;
+}
+
+.led-heater-control-label {
+    //styleName: Product - Roboto/Subtitle 1;
+    font-family: Roboto, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    text-align: left;
+}
+
+.target-temp-label {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    padding: 2px 0px 2px 5px;
+    color: $neutral-3;
+    border-radius: 2px;
+    border: solid 0.5px transparent;
+    overflow-y: hidden;
+    height: 30px;
+
+    //styleName: Product - Roboto/Body 1;
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+
+    &-active {
+        border: solid 0.5px $neutral-9;
+    }
+}
+
+@mixin targetTempInput() {
+    text-align: left;
+    width: 40px;
+    border: none;
+    color: $neutral-3;
+    background-color: transparent;
+    -moz-appearance:textfield;
+}
+
+.led-heater-control-row {
+    width: 100%;
+    margin-bottom: 43px;
+    gap: 10px;
+}
+
+.target-temp-input:disabled,
+.target-temp-input {
+
+    @include targetTempInput();
+
+    &:disabled {
+        @include targetTempInput();
+    }
+    &:focus{
+        outline: none;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

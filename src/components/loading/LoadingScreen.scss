@@ -1,0 +1,114 @@
+
+@import '../../index.scss';
+
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(10, 10, 10, 0.7);
+  // opacity: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1500;
+}
+
+.loading-screen-item-container {
+  margin: auto;
+  height: auto;
+  width: 115px;
+}
+
+.loading-screen-item {
+  margin: auto;
+  // height: 300px;
+  // width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+
+
+@mixin loadingItem($i, $type, $color) {
+  $size: 18px;
+  $space: 10;
+  $maxBorderSize: calc($size / 7);
+
+  margin: auto;
+  width: $size;
+  height: $size;
+  border-radius: calc($size / 2); 
+  border: solid 2px #{$color};
+  background-color: #{$color};
+  animation: borderGrow-#{$type}-#{$i} 6s infinite;
+
+  @keyframes borderGrow-#{$type}-#{$i} {
+      0% {
+        outline: solid 0px #{$color};
+      }
+      #{$i * 1% - $space * 1%} {
+        outline: solid 0px #{$color};
+      }
+      #{$i * 1%} {
+        outline: solid #{$maxBorderSize} #{$color};
+      }
+      #{$i * 1% + $space * 1%} {
+        outline: solid 0px #{$color};
+      }
+      100% {
+        outline: solid 0px #{$color};
+      }
+  }
+}
+
+$countDefault: 10;
+$countDark: 10;
+$countLight: 10;
+
+@while $countDefault <= 90 {
+    .loading-screen-item-default-#{$countDefault} {
+      @include loadingItem($countDefault, Default, #ffba70);
+    }
+
+    $countDefault: $countDefault + 10;
+}
+// @while $countDefault <= 90 {
+//     .loading-screen-item-default-#{$countDefault} {
+//       @include loadingItem($countDefault, Default, rgb(255, 255, 100 + $countDefault));
+//     }
+
+//     $countDefault: $countDefault + 10;
+// }
+@while $countDark <= 90 {
+  .loading-screen-item-dark-#{$countDark} {
+    @include loadingItem($countDark, Dark, $neutral-3);
+  }
+
+  $countDark: $countDark + 10;
+}
+
+@while $countLight <= 90 {
+  .loading-screen-item-light-#{$countLight} {
+    @include loadingItem($countLight, Light, $neutral-12);
+  }
+
+  $countLight: $countLight + 10;
+}
+
+.loading-label {
+  font-family: Roboto, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.loading-logo {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100vw;
+}

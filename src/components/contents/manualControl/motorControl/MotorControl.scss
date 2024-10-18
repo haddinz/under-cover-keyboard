@@ -1,0 +1,166 @@
+@import '../../../../index.scss';
+
+.motor-control-container {
+    border: solid 1px #999999;
+    border-radius: 6px;
+}
+.motor-control-title {
+    //styleName: Product - Roboto/H6;
+    font-family: Roboto, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: left;
+}
+
+.form-motor-move {
+    display: flex;
+    gap: 15px;
+}
+
+.button-home-motors {
+    border: solid 1.5px $red-3;
+    color: $red-3;
+    background-color: $neutral-13;
+    display: flex;
+
+    //styleName: Product - Roboto/Button Small;
+    font-family: Roboto, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-align: left;
+    align-items: center;
+    float: right;
+    transition-duration: 100ms;
+
+    &-disabled {
+        color: $neutral-9;
+        border-color: $neutral-9;
+    }
+}
+
+.button-home-motors:not([disabled]):hover {
+    border: solid 1.5px $red-4;
+    color: $red-4;
+}
+
+.button-motor-move-group {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.button-motor-move {
+    background-color: $green-3;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 200ms;
+}
+
+.button-motor-setting {
+    background-color: $neutral-13;
+    // width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: solid 2px $green-3;
+    float: right; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 200ms;
+
+    &-disabled {
+        border-color: $neutral-9;
+    }
+}
+.button-motor-setting:not([disabled]):hover {
+    border-color: $green-5;
+}
+.button-motor-move:not([disabled]):hover {
+    background-color: $green-5;
+}
+
+// Ripple Effect
+
+.button-motor-setting:not([disabled]):after,
+.button-motor-move:not([disabled]):after {
+    content: "";
+    background: $green-1;
+    display: block;
+    position: absolute;
+    padding-top: 32px;
+    padding-left: 32px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button-motor-move:not([disabled]):active:after,
+.button-motor-setting:not([disabled]):active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+// End Ripple Effect
+
+.input-motor-position-container {
+    height: 32px;
+    border-radius: 2px;
+    border: solid 1px #999999;
+    display: flex;
+    color: $neutral-3;
+    border-radius: 2px;
+    
+    &-disabled {
+        border-color: #C2C2C2;
+    }
+}
+.button-motor-move-disabled,
+.input-motor-position-container-disabled,
+.input-motor-position-container-disabled input {
+    background-color: $neutral-10;
+    color: $neutral-5;
+}
+
+.input-motor-position {
+    border: none;
+    width: 64px;
+    //styleName: Roboto/Body 1;
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    -moz-appearance: textfield;
+
+    &:focus {
+        outline: none;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.move-motor-label-info {
+    color: $neutral-7;
+    white-space: pre;
+    margin-left: 2px;
+}

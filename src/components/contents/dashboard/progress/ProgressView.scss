@@ -1,0 +1,83 @@
+@import '../../../../index.scss';
+
+$bar_height: 23px;
+$max_button_width: 160px;
+
+.run-progress-view {
+  width: 807px;
+}
+
+.run-progress-bar {
+  width: calc(100% - $max_button_width);
+  // padding-right: 0rem;
+}
+
+.run-progress-bar-container {
+  height: $bar_height;
+  width: 100%;
+  background: $neutral-13;
+  outline: solid 1.5px #008000;
+
+  &-aborted {
+    outline: solid 1.5px #A02C2C;
+  }
+}
+
+.run-progress-inner {    
+  height: $bar_height;
+  position: relative;
+  transition-duration: 300ms;
+  background-color: #00FF66; 
+  
+  align-items: center;
+  justify-content: center;
+
+  &-aborted {
+    background-color: #E9AFAF;   
+  }
+}
+
+.run-progress-desc {
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  margin-bottom: 0.3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &-tooltip {
+    max-width: 312px;
+    font-family: Roboto, serif;
+  }
+}
+
+@media screen and (max-width: 916px) {
+  .run-progress-view {
+    width: 100%;
+  }
+}
+
+.step-info {
+  top: -22px;
+  position: relative;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: auto;
+  color: #008000;
+
+  &-aborted {
+    color: #A02C2C;
+  }
+}
+
+.experiment-control-btn {
+  width: $max_button_width;
+  height: 50px;
+}

@@ -1,0 +1,132 @@
+// Size
+$headerHeight: calc(50rem / 16);
+$bodyPadding: calc(16rem / 16);
+// $topNotificationMargin: calc(170rem / 16);
+$menuHeight: calc(64rem / 16);
+$sideBarWidth: calc(68rem / 16);
+// $logoWidth: calc(32rem / 16);
+// $iconWidth: calc(28rem / 16);
+$notif-panel-width:calc(352rem / 16);
+
+// Scroll bar
+$width-nav-scroll: calc(8rem / 16);
+$radius-nav-scroll: calc(4rem / 16);
+
+// SIZES
+$size-xs: 'xs';
+$size-sm: 'sm';
+$size-md: 'md';
+$size-lg: 'lg';
+$size-xl: 'xl';
+
+@mixin full-width() {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: stretch;
+}
+
+@mixin full-height() {
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: stretch;
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin ellipsis-2-row() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin ellipsis-3-row() {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 1_r_e_m = 1_6_p_x
+$PX0: 0rem;
+$PX1: 0.0625rem;
+$PX1-5: 0.09375rem;
+$PX2: 0.125rem;
+$PX2-5: 0.15625rem;
+$PX3: 0.1875rem;
+$PX3-5: 0.21875rem;
+$PX4: 0.25rem;
+$PX4_5: 0.28125rem;
+$PX5: 0.3125rem;
+$PX6: 0.375rem;
+$PX7: 0.4375rem;
+$PX8: 0.5rem;
+$PX9: 0.5625rem;
+$PX10: 0.625rem;
+$PX11: 0.6875rem;
+$PX12: 0.75rem;
+$PX12-5: 0.78125rem;
+$PX13: 0.8125rem;
+$PX14: 0.875rem;
+$PX15: 0.9375rem;
+$PX16: 1rem;
+$PX17: 1.0625rem;
+$PX18: 1.125rem;
+$PX19: 1.1875rem;
+$PX20: 1.25rem;
+$PX21: 1.3125rem;
+$PX22: 1.375rem;
+$PX23: 1.4375rem;
+$PX24: 1.5rem;
+$PX25: 1.5625rem;
+$PX26: 1.625rem;
+$PX27: 1.6875rem;
+$PX28: 1.75rem;
+$PX29: 1.8125rem;
+$PX30: 1.875rem;
+$PX31: 1.9375rem;
+$PX32: 2rem;
+$PX33: 2.0625rem;
+$PX34: 2.125rem;
+$PX35: 2.1875rem;
+$PX36: 2.25rem;
+$PX37: 2.3125rem;
+$PX38: 2.375rem;
+$PX39: 2.4375rem;
+$PX40: 2.5rem;
+$PX41: 2.5625rem;
+$PX42: 2.625rem;
+$PX43: 2.6875rem;
+$PX44: 2.75rem;
+$PX45: 2.8125rem;
+$PX46: 2.875rem;
+$PX47: 2.9375rem;
+$PX48: 3rem;
+$PX49: 3.0625rem;
+$PX50: 3.125rem;
+$PX51: 3.1875rem;
+$PX52: 3.25rem;
+$PX53: 3.3125rem;
+$PX54: 3.375rem;
+$PX55: 3.4375rem;
+$PX56: 3.5rem;
+$PX57: 3.5625rem;
+$PX58: 3.625rem;
+$PX59: 3.6875rem;
+$PX60: 3.75rem;
+$PX61: 3.8125rem;
+$PX62: 3.875rem;
+$PX63: 3.9375rem;
+$PX64: 4rem;
+$PX200: 12.5rem;
+$PX236: 14.75rem;
+$PX300: 18.75rem;
+$PX530: 33.125rem;

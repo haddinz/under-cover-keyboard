@@ -1,0 +1,10 @@
+@import '../../index.scss';
+
+.modal-custom-footer {
+  & > div {
+    float: right;
+    display: flex;
+    gap: 10px;
+    position: relative;
+  }
+}

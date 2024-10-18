@@ -1,0 +1,390 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap&family=Roboto+Mono:wght@400;500;700&display=swap';
+@import './variable';
+
+// FONT
+@mixin branding-font() {
+  font-family: Montserrat, sans-serif;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+}
+
+@mixin product-font() {
+  font-family: Roboto, sans-serif;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+}
+
+@mixin code-font() {
+  font-family: 'Roboto Mono', monospace;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+}
+
+@mixin font-style($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+// REGULAR ======================================
+@mixin code-regular-text-base() {
+  @include code-font;
+  @include font-style($PX16, 140%, 400);
+}
+
+@mixin code-regular-text-2xs() {
+  @include code-font;
+  @include font-style($PX10, normal, 400);
+}
+
+@mixin code-regular-text-xs() {
+  @include code-font;
+  @include font-style($PX12, normal, 400);
+}
+
+@mixin code-regular-text-sm() {
+  @include code-font;
+  @include font-style($PX14, 140%, 400);
+}
+
+@mixin code-regular-text-lg() {
+  @include code-font;
+  @include font-style($PX20, 120%, 400);
+}
+
+@mixin code-regular-text-xl() {
+  @include code-font;
+  @include font-style($PX24, 120%, 400);
+}
+
+@mixin code-regular-text-2xl() {
+  @include code-font;
+  @include font-style($PX32, 120%, 400);
+}
+
+@mixin code-regular-text-3xl() {
+  @include code-font;
+  @include font-style($PX40, 110%, 400);
+}
+
+@mixin product-regular-text-base() {
+  @include product-font;
+  @include font-style($PX16, 140%, 400);
+}
+
+@mixin product-regular-text-2xs() {
+  @include product-font;
+  @include font-style($PX10, normal, 400);
+}
+
+@mixin product-regular-text-xs() {
+  @include product-font;
+  @include font-style($PX12, normal, 400);
+}
+
+@mixin product-regular-text-sm() {
+  @include product-font;
+  @include font-style($PX14, 140%, 400);
+}
+
+@mixin product-regular-text-lg() {
+  @include product-font;
+  @include font-style($PX20, 120%, 400);
+}
+
+@mixin product-regular-text-xl() {
+  @include product-font;
+  @include font-style($PX24, 120%, 400);
+}
+
+@mixin product-regular-text-2xl() {
+  @include product-font;
+  @include font-style($PX32, 120%, 400);
+}
+
+@mixin product-regular-text-3xl() {
+  @include product-font;
+  @include font-style($PX40, 110%, 400);
+}
+
+@mixin branding-regular-text-base() {
+  @include branding-font;
+  @include font-style($PX16, 140%, 400);
+}
+
+@mixin branding-regular-text-2xs() {
+  @include branding-font;
+  @include font-style($PX10, normal, 400);
+}
+
+@mixin branding-regular-text-xs() {
+  @include branding-font;
+  @include font-style($PX12, normal, 400);
+}
+
+@mixin branding-regular-text-sm() {
+  @include branding-font;
+  @include font-style($PX14, 140%, 400);
+}
+
+@mixin branding-regular-text-lg() {
+  @include branding-font;
+  @include font-style($PX20, 120%, 400);
+}
+
+@mixin branding-regular-text-xl() {
+  @include branding-font;
+  @include font-style($PX24, 120%, 400);
+}
+
+@mixin branding-regular-text-2xl() {
+  @include branding-font;
+  @include font-style($PX32, 120%, 400);
+}
+
+@mixin branding-regular-text-3xl() {
+  @include branding-font;
+  @include font-style($PX40, 110%, 400);
+}
+
+// MEDIUM ======================================
+@mixin code-medium-text-base() {
+  @include code-font;
+  @include font-style($PX16, 140%, 500);
+}
+
+@mixin code-medium-text-2xs() {
+  @include code-font;
+  @include font-style($PX10, normal, 500);
+}
+
+@mixin code-medium-text-xs() {
+  @include code-font;
+  @include font-style($PX12, normal, 500);
+}
+
+@mixin code-medium-text-sm() {
+  @include code-font;
+  @include font-style($PX14, 140%, 500);
+}
+
+@mixin code-medium-text-lg() {
+  @include code-font;
+  @include font-style($PX20, 120%, 500);
+}
+
+@mixin code-medium-text-xl() {
+  @include code-font;
+  @include font-style($PX24, 120%, 500);
+}
+
+@mixin code-medium-text-2xl() {
+  @include code-font;
+  @include font-style($PX32, 120%, 500);
+}
+
+@mixin code-medium-text-3xl() {
+  @include code-font;
+  @include font-style($PX40, 110%, 500);
+}
+
+@mixin product-medium-text-base() {
+  @include product-font;
+  @include font-style($PX16, 140%, 500);
+}
+
+@mixin product-medium-text-2xs() {
+  @include product-font;
+  @include font-style($PX10, normal, 500);
+}
+
+@mixin product-medium-text-xs() {
+  @include product-font;
+  @include font-style($PX12, normal, 500);
+}
+
+@mixin product-medium-text-sm() {
+  @include product-font;
+  @include font-style($PX14, 140%, 500);
+}
+
+@mixin product-medium-text-lg() {
+  @include product-font;
+  @include font-style($PX20, 120%, 500);
+}
+
+@mixin product-medium-text-xl() {
+  @include product-font;
+  @include font-style($PX24, 120%, 500);
+}
+
+@mixin product-medium-text-2xl() {
+  @include product-font;
+  @include font-style($PX32, 120%, 500);
+}
+
+@mixin product-medium-text-3xl() {
+  @include product-font;
+  @include font-style($PX40, 110%, 500);
+}
+
+@mixin branding-medium-text-base() {
+  @include branding-font;
+  @include font-style($PX16, 140%, 500);
+}
+
+@mixin branding-medium-text-2xs() {
+  @include branding-font;
+  @include font-style($PX10, normal, 500);
+}
+
+@mixin branding-medium-text-xs() {
+  @include branding-font;
+  @include font-style($PX12, normal, 500);
+}
+
+@mixin branding-medium-text-sm() {
+  @include branding-font;
+  @include font-style($PX14, 140%, 500);
+}
+
+@mixin branding-medium-text-lg() {
+  @include branding-font;
+  @include font-style($PX20, 120%, 500);
+}
+
+@mixin branding-medium-text-xl() {
+  @include branding-font;
+  @include font-style($PX24, 120%, 500);
+}
+
+@mixin branding-medium-text-2xl() {
+  @include branding-font;
+  @include font-style($PX32, 120%, 500);
+}
+
+@mixin branding-medium-text-3xl() {
+  @include branding-font;
+  @include font-style($PX40, 110%, 500);
+}
+
+// BOLD ======================================
+@mixin code-bold-text-base() {
+  @include code-font;
+  @include font-style($PX16, 140%, 700);
+}
+
+@mixin code-bold-text-2xs() {
+  @include code-font;
+  @include font-style($PX10, normal, 700);
+}
+
+@mixin code-bold-text-xs() {
+  @include code-font;
+  @include font-style($PX12, normal, 700);
+}
+
+@mixin code-bold-text-sm() {
+  @include code-font;
+  @include font-style($PX14, 140%, 700);
+}
+
+@mixin code-bold-text-lg() {
+  @include code-font;
+  @include font-style($PX20, 120%, 700);
+}
+
+@mixin code-bold-text-xl() {
+  @include code-font;
+  @include font-style($PX24, 120%, 700);
+}
+
+@mixin code-bold-text-2xl() {
+  @include code-font;
+  @include font-style($PX32, 120%, 700);
+}
+
+@mixin code-bold-text-3xl() {
+  @include code-font;
+  @include font-style($PX40, 110%, 700);
+}
+
+@mixin product-bold-text-base() {
+  @include product-font;
+  @include font-style($PX16, 140%, 700);
+}
+
+@mixin product-bold-text-2xs() {
+  @include product-font;
+  @include font-style($PX10, normal, 700);
+}
+
+@mixin product-bold-text-xs() {
+  @include product-font;
+  @include font-style($PX12, normal, 700);
+}
+
+@mixin product-bold-text-sm() {
+  @include product-font;
+  @include font-style($PX14, 140%, 700);
+}
+
+@mixin product-bold-text-lg() {
+  @include product-font;
+  @include font-style($PX20, 120%, 700);
+}
+
+@mixin product-bold-text-xl() {
+  @include product-font;
+  @include font-style($PX24, 120%, 700);
+}
+
+@mixin product-bold-text-2xl() {
+  @include product-font;
+  @include font-style($PX32, 120%, 700);
+}
+
+@mixin product-bold-text-3xl() {
+  @include product-font;
+  @include font-style($PX40, 110%, 700);
+}
+
+@mixin branding-bold-text-base() {
+  @include branding-font;
+  @include font-style($PX16, 140%, 700);
+}
+
+@mixin branding-bold-text-2xs() {
+  @include branding-font;
+  @include font-style($PX10, normal, 700);
+}
+
+@mixin branding-bold-text-xs() {
+  @include branding-font;
+  @include font-style($PX12, normal, 700);
+}
+
+@mixin branding-bold-text-sm() {
+  @include branding-font;
+  @include font-style($PX14, 140%, 700);
+}
+
+@mixin branding-bold-text-lg() {
+  @include branding-font;
+  @include font-style($PX20, 120%, 700);
+}
+
+@mixin branding-bold-text-xl() {
+  @include branding-font;
+  @include font-style($PX24, 120%, 700);
+}
+
+@mixin branding-bold-text-2xl() {
+  @include branding-font;
+  @include font-style($PX32, 120%, 700);
+}
+
+@mixin branding-bold-text-3xl() {
+  @include branding-font;
+  @include font-style($PX40, 110%, 700);
+}

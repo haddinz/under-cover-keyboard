@@ -1,0 +1,163 @@
+// COLOR PALETTE
+$brand-1: #f7a246;
+$brand-2: #414042;
+$brand-3: #fefefe;
+
+$neutral-1: #1b1b1b;
+$neutral-2: #313131;
+$neutral-3: #474747;
+$neutral-4: #5d5d5d;
+$neutral-5: #737373;
+$neutral-6: #888888;
+$neutral-7: #9e9e9e;
+$neutral-8: #b4b4b4;
+$neutral-9: #cacaca;
+$neutral-10: #e0e0e0;
+$neutral-11: #f5f5f5;
+$neutral-12: #fafafa;
+$neutral-13: #ffffff;
+
+$green-1: #26572b;
+$green-2: #337535;
+$green-3: #3f9243;
+$green-4: #4caf50;
+$green-5: #6abc6d;
+$green-6: #88ca8a;
+$green-7: #a5d7a7;
+$green-8: #c3e4c5;
+
+$blue-1: #00357a;
+$blue-2: #0047a3;
+$blue-3: #0059cc;
+$blue-4: #006af5;
+$blue-5: #2a83f7;
+$blue-6: #559cfb;
+$blue-7: #80b4fa;
+$blue-8: #aacdfc;
+$blue-selected: #cce1fd;
+
+$yellow-1: #806505;
+$yellow-2: #aa8707;
+$yellow-3: #d4a808;
+$yellow-4: #ffca0a;
+$yellow-5: #ffd333;
+$yellow-6: #ffdc5c;
+$yellow-7: #ffe484;
+$yellow-8: #ffedad;
+
+$orange-1: #7b5123;
+$orange-2: #a56c2f;
+$orange-3: #ce873a;
+$orange-4: #f7a246;
+$orange-5: #f8b165;
+$orange-6: #fac184;
+$orange-7: #fbd0a2;
+$orange-8: #fce0c1;
+
+$red-1: #7b0000;
+$red-2: #a40000;
+$red-3: #db0000;
+$red-4: #ff5252;
+$red-5: #ff7171;
+$red-6: #ff9999;
+$red-7: #ffd1d1;
+$red-8: #fff0f0;
+
+$pink-1: #7a0027;
+$pink-2: #b30037;
+$pink-3: #d60042;
+$pink-4: #f50049;
+$pink-5: #ff3372;
+$pink-6: #ff578b;
+$pink-7: #ff9ebe;
+$pink-8: #ffc2d5;
+
+$cyan-1: #00566b;
+$cyan-2: #00738f;
+$cyan-3: #008cad;
+$cyan-4: #00b1db;
+$cyan-5: #00c1f0;
+$cyan-6: #47dbff;
+$cyan-7: #85e7ff;
+$cyan-8: #c7f4ff;
+
+$magenta-1: #610061;
+$magenta-2: #7f0080;
+$magenta-3: #b800b8;
+$magenta-4: #d100d1;
+$magenta-5: #ff57ff;
+$magenta-6: #ff85ff;
+$magenta-7: #ffc2ff;
+$magenta-8: #ffdbff;
+
+$purple-1: #39008f;
+$purple-2: #5100cc;
+$purple-3: #6100f5;
+$purple-4: #7b24ff;
+$purple-5: #b585ff;
+$purple-6: #ceadff;
+$purple-7: #e0ccff;
+$purple-8: #f0e6ff;
+
+$brown-1: #572300;
+$brown-2: #9e3f00;
+$brown-3: #c74f00;
+$brown-4: #db5700;
+$brown-5: #ff9a57;
+$brown-6: #ffac75;
+$brown-7: #ffc59e;
+$brown-8: #ffe3d1;
+
+@mixin state-color($color, $opacity) {
+  color: $color;
+  opacity: $opacity;
+}
+
+@mixin neutral-focus() {
+  @include state-color($neutral-8, 0.2);
+}
+
+@mixin neutral-pressed() {
+  @include state-color($neutral-8, 0.5);
+}
+
+@mixin orange-focus() {
+  @include state-color($brand-1, 0.2);
+}
+
+@mixin blue-focus() {
+  @include state-color($blue-4, 0.2);
+}
+
+@mixin blue-hover() {
+  @include state-color($blue-7, 0.2);
+}
+
+@mixin blue-pressed {
+  @include state-color($blue-4, 0.5);
+}
+
+@mixin blue-selected {
+  @include state-color(#cce1fd, 0.5);
+}
+
+// INTERACTION COLOR
+$hoverColor: #432142;
+
+$positiveFeedbackBg: #d4edda;
+$positiveFeedbackFont: #8000;
+
+$negativeFeedbackBg: #f8d5da;
+$negativeFeedbackFont: #8c2228;
+
+$warningBg: #fff3cd;
+$warningFont: #956507;
+
+$successColor: #219653;
+
+// Scroll bar
+// $scrollColor: #facfa0;
+$scrollColor: #c7f4ff;
+
+// Header
+$headerColor: #3aadd9;

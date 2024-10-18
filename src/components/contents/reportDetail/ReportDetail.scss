@@ -1,0 +1,68 @@
+@import '../../../index.scss';
+
+.report-detail {
+
+  &-additional-files {
+    font-family: Roboto, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.15px;
+    text-align: left;
+
+    right: 0;
+    position: absolute;
+    z-index: 5;
+
+    &-item {
+      width: 216px;
+      height: 56px;
+      background-color: $neutral-11;
+
+      display: flex;
+      align-items: left;
+
+      & > * {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    &-item:hover {
+      background-color: $neutral-10;
+      cursor: pointer;
+    }
+
+    &-btn {
+
+      text-transform: uppercase;
+      width: 216px;
+      height: 32px;
+      border: none;
+      border-radius: 5px;
+      background-color: $orange-4;
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+      //styleName: Product - Roboto/Button Medium;
+      color: #fff;
+      font-family: Roboto, serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 1.25px;
+      text-align: left;
+
+      &-icon {
+        border-left: solid 2px #fff;
+        height: 100%;
+      }
+    }
+  }
+
+  &-protocol-view {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    width: 90vw;
+  }
+}

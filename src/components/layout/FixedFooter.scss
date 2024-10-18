@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+$left-margin: 64px; // sidebar width
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100vw - $left-margin);
+    height: 30px;
+    
+    background-color: $neutral-11;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50);
+
+    z-index: 1;
+
+    color: $neutral-1;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 200% */
+}

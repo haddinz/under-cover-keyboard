@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "DOM",
+      "ES5",
+      "ES6",
+      "ES2016",
+      "scripthost",
+      "ESNext"
+    ],
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "noLib": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": [
+      "reflect-metadata"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src",
+    ".eslintrc.js"
+  ],
+  "exclude": [
+    "**/__test__",
+    "**/storybook",
+    "node_modules"
+  ],
+  "types": [
+    "jest",
+    "@testing-library/jest-dom"
+  ]
+}

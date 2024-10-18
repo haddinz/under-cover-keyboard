@@ -1,0 +1,244 @@
+@import '../../../../index.scss';
+
+.analytical-report {
+  min-height: 532px;
+
+  &-common-buttons {
+    font-family: Roboto, serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.45px;
+    text-align: center;
+
+    color: $neutral-2;
+    background-color: #fff;
+    
+    border: solid 1px $neutral-7;
+    border-radius: 4px;
+
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &:hover {
+      background-color: $neutral-10;
+    }
+  }
+
+  &-sub-content {
+    height: 340px;
+    overflow: hidden;
+    border: solid 1px $neutral-7;
+
+    &-empty {
+      width: 100%;
+      height: 100%;
+
+      color: $neutral-3;
+      font-family: Roboto, serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.25px;
+      text-align: center;
+    }
+
+    &-title {
+      font-family: Roboto, serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.25px;
+      text-align: left;
+      color: $neutral-3;
+    }
+
+    &-option {
+      min-width: 140px;
+      float: right;
+      gap: 5px;
+
+      &-active {
+        background-color: $neutral-11;
+        color: $neutral-2;
+      }
+
+      &-disabled {
+        background-color: $neutral-10;
+        color: $neutral-9;
+        color: $neutral-8;
+      }
+
+      &-channel {
+        height: 26px;
+        width: 95px;
+        position: relative;
+
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        padding: 2px, 14px, 2px, 14px;
+        border: solid 1px $neutral-8;
+        border-radius: 2px;
+
+        cursor: pointer;
+      }
+
+      &-export {
+        position: relative;
+        height: 26px;
+        width: 26px;
+        border: solid 1px $neutral-7;
+        border-radius: 2px;
+        font-style: bold;
+
+        cursor: pointer;
+      }
+      &-dropdown {
+        position: absolute;
+        background-color: $neutral-11;
+        top: 28px;
+        right: 0;
+        z-index: 5;
+      }
+      &-dropdown-item {
+        min-width: 135px;
+        white-space: pre;
+        height: 44px;
+
+        cursor: pointer;
+        
+        border: none;
+        background-color: transparent;
+      }
+      &-dropdown-item:hover {
+        background-color: $neutral-10;
+      }
+    }
+  }
+
+  &-detail {
+    font-family: Roboto, serif;
+    border: solid 1px $neutral-7;
+    padding-bottom: 1rem;
+
+    &-title {
+      font-family: Roboto, serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: 0.3px;
+      text-align: left;
+      white-space: nowrap;
+
+      color: $neutral-3;
+    }
+
+    &-header td {
+      background-color: $neutral-10;
+      // border: solid 1px black;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.1px;
+    }
+
+    &-header .btn-sort-asc > button,
+    &-header .btn-sort-desc > button {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+    &-header .btn-sort-desc {
+      margin-top: -5px;
+    }
+
+    &-body {
+      // height: 490px;
+      // overflow-y: auto;
+      overflow-x: hidden;
+      width: 100%;
+
+      & td {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.25px;
+        text-align: center;
+        // border: solid 1px black;
+      }
+    }
+
+    &-table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+
+      &-cell {
+        width: 100%;
+        padding: 4px, 16px, 4px, 16px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        & > * {
+          margin: auto;
+        }
+      }
+      & td {
+        margin: 0;
+        padding: 0;
+      }
+      & td:first-child  {
+        width: 50px;
+      }
+      & td:nth-child(2)  {
+        width: 64px;
+      }
+      & td:nth-child(3) {
+        width: 70px; 
+      }
+      & td:nth-child(4)  {
+        min-width: 78px
+      }
+    }
+  }
+
+  &-reset-btn {
+    height: 26px;
+    width: 121px;
+    border-radius: 4px;
+    padding: 4px 10px 4px 10px;
+    background-color: $neutral-2;
+    border: none;
+    white-space: pre;
+
+    font-family: Roboto, serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.45px;
+
+    color: $neutral-13;
+  }
+}
+
+.analytic-detail-ch-selection {
+  border: solid 1px $neutral-8;
+  border-radius: 1px;
+}
+
+#ch-select-icon { font-size: 0.5em; }
+
+// Chart
+.bb-line {
+  shape-rendering: geometricPrecision;
+}

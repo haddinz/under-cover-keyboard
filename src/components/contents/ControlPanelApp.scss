@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+
+.cpanel-connecting-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+}
+.cpanel-connecting-label {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    & > h2,
+    & > div {
+        margin: auto;
+    }
+}
+
+.not-impelemented-content {
+    display: flex;
+    align-items: center;
+
+    & > * {
+        margin: auto;
+    }
+}

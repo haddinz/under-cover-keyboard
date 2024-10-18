@@ -1,0 +1,65 @@
+@import "../../../index.scss";
+
+
+.wifi-icon-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  .icon-lock{
+    position: absolute;
+    top: 37%;
+    left: 67%;
+    .MuiSvgIcon-root.xs{
+      width: 0.7rem;
+      height: 0.7rem;
+    
+    }
+  }
+
+  .wifi-strength-icon {
+    path {
+      stroke: white;
+      fill: white;
+    }
+  
+    &.weak {
+      path:nth-child(1) {
+        stroke: rgb(221, 214, 214);
+        fill:  rgb(221, 214, 214);
+      }
+      path:nth-child(2),
+      path:nth-child(3),
+      path:nth-child(4) {
+        stroke: black; 
+        fill: black;
+      }
+    }
+  
+    &.moderate {
+      path:nth-child(1),
+      path:nth-child(2) {
+        stroke: rgb(221, 214, 214);
+        fill:  rgb(221, 214, 214);
+      }
+      path:nth-child(3),
+      path:nth-child(4) {
+  
+        stroke: black;
+        fill: black;
+      }
+    }
+  
+    &.strong {
+      path:nth-child(1),
+      path:nth-child(2),
+      path:nth-child(3),
+      path:nth-child(4) {
+        stroke: black;
+        fill: black;
+      }
+    }
+  }
+}
+
+

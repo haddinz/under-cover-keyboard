@@ -1,0 +1,24 @@
+
+.protocol-number-field {
+    position: relative;  
+    &__helper {
+        position: absolute;
+        right: 0px;
+        top: 2px;
+        z-index: 2;
+    }
+    &-changed {
+        & input {
+            background-color: #FFEDAD;
+        }
+    }
+}
+
+// [id^="protocol-editor-section-field-"] {
+//     position: relative;    
+// }
+
+// HACK: modify behavior of the error message
+.fmlx-text-field__helper-text {
+    display: none;
+}

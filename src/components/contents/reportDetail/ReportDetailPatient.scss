@@ -1,0 +1,176 @@
+@import '../../../index.scss';
+
+.test-result {
+    display: flex;
+    width: 800px;
+    margin: auto;
+
+    &-container {
+        background-color: $neutral-11;
+        min-height: 100vh;
+        margin-bottom: 158px;
+    }
+
+    &-status {
+        height: 64px;
+
+        &-label {
+            //styleName: Product/Regular/text-xl;
+            font-family: Roboto, serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+        }
+
+        &-value {
+            //styleName: Product/Bold/text-xl;
+            font-family: Roboto, serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+        }
+
+        &-positive {
+            color: $red-3;
+        }
+
+        &-negative {
+            color: $green-2;
+        }
+
+        &-indeterminate {
+            color: $neutral-4;
+        }
+
+        &-error {
+            color: $yellow-1;
+        }
+    }
+
+    &-graph-toggle-btn {
+        color: $blue-3;
+        background: none;
+        border: none;
+
+        font-family: Roboto, serif;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+
+    &-banner {
+        height: 158px;
+        position: fixed;
+        bottom: 0;
+        width: calc(100% - 2rem);
+        background-color: #E6F0FE;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        text-align: center;
+
+        &-title {
+            margin: auto;
+            font-family: Roboto, serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+
+            color: $blue-3;
+        }
+
+        &-description {
+            margin: auto;
+
+            font-family: Roboto, serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+
+            color: $neutral-5;
+        }
+    }
+}
+
+.run-information {
+    margin: auto;
+    
+    &-field {
+        display: flex;
+        color: $neutral-3;
+    }
+    &-label {
+        width: 110px;
+
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &-value {
+        font-family: Roboto, serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+}
+
+.antibiotics-resistances {
+    height: 314px;
+    width: 450px;
+    left: 376px;
+    top: 0px;
+    border-radius: 6px;
+    background-color: #F4F4F4;
+
+    &-header {
+        font-family: Roboto, serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: $neutral-2;
+
+        border-bottom: solid 1px #CAC4D0;
+    }
+    &-body {
+        height: 100%;
+        -moz-columns: 2;
+        -webkit-columns: 2;
+        columns: 2;
+    }
+    &-item {
+        height: calc(100% / 6);
+    }
+    &-title {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+
+        color: $neutral-3;
+    }
+    &-value {
+        font-family: Roboto;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        
+        color: $neutral-4;
+    }
+}

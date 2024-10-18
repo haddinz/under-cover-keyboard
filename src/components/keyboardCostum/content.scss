@@ -1,0 +1,107 @@
+.keyboard-style {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(215, 215, 215);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .kerbord-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .closeOutline {
+      cursor: pointer;
+    }
+  }
+
+  .textbox {
+    width: 100%;
+
+    textarea {
+      width: 100%;
+      height: 94px;
+      margin: 15px 0;
+      font-size: 18px;
+      box-sizing: border-box;
+      padding: 10px;
+      white-space: nowrap;
+      overflow-wrap: break-word;
+    }
+  }
+
+  .display-style {
+    width: 100%;
+
+    @mixin keyboard-row($justify: center) {
+      display: flex;
+      justify-content: $justify;
+      flex-wrap: nowrap;
+      width: 100%;
+
+      button {
+        flex: 1;
+        margin: 2px;
+        padding: 6px;
+        font-size: 22px;
+        color: rgb(16, 16, 16);
+        border-radius: 8px;
+        font-family: monospace;
+        border-color: white;
+        background-color: white;
+        border: 2px solid;
+      }
+
+      button:hover {
+        background-color: #f7a246;
+        color: black;
+        cursor: pointer;
+      }
+    }
+
+    .first-row {
+      @include keyboard-row(space-between);
+    }
+
+    .second-row {
+      @include keyboard-row(space-between);
+    }
+
+    .third-row {
+      @include keyboard-row(space-between);
+
+      .light {
+        background-color: #f7a246;
+      }
+
+      .dark {
+        background-color: white;
+      }
+    }
+
+    .forth-row {
+      @include keyboard-row(space-between);
+
+      .spacebar {
+        padding: 0 220px;
+      }
+
+      .enter {
+        background-color: rgb(38, 107, 40);
+        padding: 0 20px;
+        border-color: black;
+        color: white;
+      }
+    }
+  }
+}
