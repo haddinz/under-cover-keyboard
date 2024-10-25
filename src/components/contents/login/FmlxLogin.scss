@@ -1,0 +1,109 @@
+@import "../../../index.scss";
+
+@mixin form-input-item($colorBorder) {
+  width: 100%;
+  padding: 16px 8px;
+  font-size: 14px;
+  border: 1px solid $colorBorder;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+@mixin login-body-style($borderColor, $logoPosition) {
+  z-index: -10;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background-color: #ffffff;
+
+  .login-body {
+    padding: 24px 24px;
+    border-radius: 8px;
+    border: $borderColor 2px solid;
+
+    .logo {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: $logoPosition;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      margin: 20px 0;
+    }
+
+    .login-form {
+      padding: 20px 0;
+      border-radius: 8px;
+      width: 428px;
+
+      .form-group {
+        margin-bottom: 15px;
+
+        .form-input-transparent {
+          @include form-input-item(transparent);
+        }
+
+        .form-input-solid {
+          @include form-input-item(#a4a4a4);
+        }
+      }
+
+      .form-input-password {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #a4a4a4;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+      }
+
+      .toggle-password {
+        border: none;
+        background-color: transparent;
+      }
+
+      .form-button {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+        background-color: #f7a246;
+        border-radius: 4px;
+        border: none;
+        color: white;
+      }
+    }
+  }
+
+  .login-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+.external-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .login-screen-full {
+    @include login-body-style(#f7a246, flex-start);
+  }
+
+  .login-screen {
+    @include login-body-style(transparent, center);
+  }
+}
